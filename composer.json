@@ -1,0 +1,21 @@
+{
+    "license": "datalove",
+    "require": {
+        "symfony/console": "*",
+        "legifrance/parser-php": "*@dev"
+    },
+    "bin": [
+        "bin/legifrance"
+    ],
+    "repositories": {
+        "legifrance/parser-php": {
+            "type": "vcs",
+            "url": "git@homecomputing.fr:legifrance-parser-php.git"
+        }
+    },
+    "autoload": {
+        "psr-0": {
+            "Legifrance": "src/"
+        }
+    }
+}
