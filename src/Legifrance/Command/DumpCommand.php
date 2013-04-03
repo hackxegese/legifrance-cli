@@ -13,7 +13,7 @@ class DumpCommand extends \Legifrance\Command
         $this->setName('legifrance:dump')
             ->setDescription('Télécharge l\'ensemble d\'un code')
             ->addOption('code', null, InputArgument::OPTIONAL, 'L\'ID du code')
-            ->addOption('date', date('Ymd'), InputArgument::OPTIONAL, 'Date du code, sous la format YYYYMMDD')
+            ->addOption('date', 'd', InputArgument::OPTIONAL, 'Date du code, sous la format YYYYMMDD')
             ->addArgument('destination', InputArgument::REQUIRED, 'Répertoire de destination');
     }
 
