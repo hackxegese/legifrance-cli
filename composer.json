@@ -1,7 +1,7 @@
 {
     "license": "datalove",
     "require": {
-        "symfony/console": "*",
+        "symfony/console": ">=2.4",
         "legifrance/parser-php": "*@dev"
     },
     "bin": [
@@ -14,8 +14,8 @@
         }
     },
     "autoload": {
-        "psr-0": {
-            "Legifrance": "src/"
+        "psr-4": {
+            "Legifrance\\": "src/"
         }
     }
 }
