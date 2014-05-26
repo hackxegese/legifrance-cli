@@ -10,7 +10,7 @@ class ArticleShowCommand extends \Legifrance\Command
 {
     protected function configure()
     {
-        $this->setName('legifrance:article:show')
+        $this->setName('article:show')
             ->setDescription('Affiche une section')
             ->addOption('code', null, InputArgument::REQUIRED, 'L\'ID du code')
             ->addOption('section', null, InputArgument::REQUIRED, 'L\'ID de la section')

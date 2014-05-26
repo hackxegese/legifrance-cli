@@ -9,7 +9,7 @@ class CodeListCommand extends \Legifrance\Command
 {
     protected function configure()
     {
-        $this->setName('legifrance:code:list')
+        $this->setName('code:list')
             ->setDescription('Liste les codes disponibles');
     }
 

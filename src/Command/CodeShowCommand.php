@@ -10,7 +10,7 @@ class CodeShowCommand extends \Legifrance\Command
 {
     protected function configure()
     {
-        $this->setName('legifrance:code:show')
+        $this->setName('code:show')
             ->setDescription('Affiche le sommaire d\'un code')
             ->addOption('code', null, InputArgument::REQUIRED, 'L\'ID du code')
             ->addOption('date', date('Ymd'), InputArgument::OPTIONAL, 'Date du code, sous la format YYYYMMDD');
