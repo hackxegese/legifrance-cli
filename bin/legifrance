@@ -15,5 +15,5 @@ else {
     );
 }
 
-$app = new \Legifrance\Console\Application();
-$app->run();
+(new \Legifrance\Console\Application)
+    ->run();

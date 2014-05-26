@@ -11,12 +11,12 @@ class Application extends \Symfony\Component\Console\Application
         $stream = new \Legifrance\Stream();
         $parser = new \Legifrance\Parser($stream);
 
-        $this->addCommands(array(
+        $this->addCommands([
             new \Legifrance\Command\CodeListCommand($parser),
             new \Legifrance\Command\CodeShowCommand($parser),
             new \Legifrance\Command\SectionShowCommand($parser),
             new \Legifrance\Command\ArticleShowCommand($parser),
             new \Legifrance\Command\DumpCommand($parser),
-        ));
+        ]);
     }
 }

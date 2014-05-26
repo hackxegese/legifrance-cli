@@ -26,7 +26,7 @@ class DumpCommand extends \Legifrance\Command
             $codes = $this->parser->getCodes();
         }
         else {
-            $codes = array($code => '');
+            $codes = [$code => ''];
         }
         $this->mkdir($dest);
 
