@@ -7,11 +7,11 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class DumpCommand extends \Legifrance\Command
+class CodeDumpCommand extends \Legifrance\Command
 {
     protected function configure()
     {
-        $this->setName('dump')
+        $this->setName('code:dump')
             ->setDescription('Télécharge l’ensemble d’un code')
             ->addOption('code', null, InputArgument::OPTIONAL, 'L’ID du code')
             ->addOption('date', 'd', InputArgument::OPTIONAL, 'Date du code, sous la format YYYYMMDD')
