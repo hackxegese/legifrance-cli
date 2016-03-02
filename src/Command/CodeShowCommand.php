@@ -1,8 +1,9 @@
 <?php
+declare(strict_types = 1);
 
 namespace Legifrance\Command;
 
-use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -12,8 +13,8 @@ class CodeShowCommand extends \Legifrance\Command
     {
         $this->setName('code:show')
             ->setDescription('Affiche le sommaire d\'un code')
-            ->addOption('code', null, InputArgument::REQUIRED, 'L\'ID du code')
-            ->addOption('date', date('Ymd'), InputArgument::OPTIONAL, 'Date du code, sous la format YYYYMMDD');
+            ->addOption('code', null, InputOption::VALUE_REQUIRED, 'L\'ID du code')
+            ->addOption('date', date('Ymd'), InputOption::VALUE_OPTIONAL, 'Date du code, sous la format YYYYMMDD');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

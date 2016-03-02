@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 
 namespace Legifrance\Command;
 
@@ -106,7 +107,7 @@ class CodePatchCommand extends \Legifrance\Command
         fclose($fd);
     }
 
-    private function loadLaw($code)
+    private function loadLaw($code): array
     {
         $law = [];
 
@@ -124,22 +125,22 @@ class CodePatchCommand extends \Legifrance\Command
         return $law;
     }
 
-    private function isPageNumber($line)
+    private function isPageNumber($line): bool
     {
         return (preg_match('/^.?\d+\n$/', $line) === 1);
     }
 
-    private function isEndOfQuote($line)
+    private function isEndOfQuote($line): bool
     {
         return (strlen($line) >= 2 && ord($line[strlen($line) - 2]) === 187);
     }
 
-    private function isNewChapter($line)
+    private function isNewChapter($line): bool
     {
         return (preg_match('/(Sous-section|Section|CHAPITRE|Paragraphe) (\d+|I+)/', $line) === 1);
     }
 
-    private function isStartOfArt($line)
+    private function isStartOfArt($line): bool
     {
         try {
             $art = $this->getArtNum($line);
@@ -150,7 +151,7 @@ class CodePatchCommand extends \Legifrance\Command
         }
     }
 
-    private function getArtNum(string $heading)
+    private function getArtNum(string $heading): string
     {
         if ($heading[0] === '#') {
             preg_match('/# Article L(\d+(-\d+){0,3})/', $heading, $matches);

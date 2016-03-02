@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+declare(strict_types = 1);
 
 if (is_dir($vendor = __DIR__ . '/../vendor')) {
     require $vendor . '/autoload.php';
